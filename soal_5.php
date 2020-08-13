@@ -1,13 +1,15 @@
 <h3>SOAL 5</h3>
 <?php
-$ouw = "O";
-$ex = "X";
-for ($i = 5; $i >= 1; $i--) {
-    for ($j = 5; $j > $i; $j--) {
-        echo $ouw;
+echo "<pre>";
+$stars = "X";
+for($a=1; $a<=5; $a++)
+{
+    $spaces = "O";
+    for($b = (6 - $a); $b>1; $b--)
+    {
+        $spaces .= "O";
     }
-    for ($k = 1; $k < ($i * 2); $k++) {
-        echo $ex;
-    }
-    echo "</br>";
+    echo $spaces . $stars . $spaces;
+    $stars .= "XX";
+    echo "<br/>";
 }
